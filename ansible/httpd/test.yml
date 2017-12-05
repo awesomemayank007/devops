@@ -1,0 +1,4 @@
+---
+- hosts: web2
+  roles:
+    -  httpd
