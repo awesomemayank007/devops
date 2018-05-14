@@ -1,0 +1,21 @@
+Version: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+  labels:
+    app: my-apache
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-apache
+  template:
+    metadata:
+      labels:
+        app: my-apache
+    spec:
+      containers:
+      - name: my-apache
+        image: my-image:t1
+        ports:
+        - containerPort: 80

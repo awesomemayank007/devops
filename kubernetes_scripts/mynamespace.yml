@@ -1,0 +1,6 @@
+kind: "Namespace"
+apiVersion: "v1"
+metadata:
+  name: "mayank-ns-file"
+  labels:
+    name: "mayank-ns-file"
