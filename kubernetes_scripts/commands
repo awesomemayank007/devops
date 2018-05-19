@@ -1,0 +1,22 @@
+account = namespaces
+kubectl get pods
+kubectl get ns
+kubectl -n mayank get pods
+kubectl  -n mayank create -f pod
+kubectl  get nodes
+watch kubectl -n mayank get pods
+kubectl -n mayank delete pods nginx
+alias k="kubectl  -n mayank "
+SCALE UP: kubectl scale --replicas=10 rc/my-nginx
+SCALE DOWN: kubectl scale --replicas=4 rc/my-nginx
+CREATING SERVICES: kubectl expose --typr=NodePort --port=80 rc/my-apache-rc
+
+POD
+replica controller = SCALLING, NEW(rolling update)
+Replica set 	   = NO ROLLING UPDATES,META DATA HANDLING.	=> DEPLOYMENT
+git clone https://github.com/awesomemayank007/devops.git
+
+
+10.244.1.38:80
+10.244.5.57:80
+
