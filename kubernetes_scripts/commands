@@ -15,6 +15,7 @@ POD
 replica controller = SCALLING, NEW(rolling update)
 Replica set 	   = NO ROLLING UPDATES,META DATA HANDLING.	=> DEPLOYMENT
 git clone https://github.com/awesomemayank007/devops.git
+ k rolling-update my-apache-rc --image=my-ubunut-image:t1
 
 
 10.244.1.38:80

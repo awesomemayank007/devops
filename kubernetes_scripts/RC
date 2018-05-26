@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: my-nginx
+  name: my-nginx-rc
 spec:
   replicas: 1
   template:
