@@ -1,5 +1,5 @@
 ---
-- hosts: web2
+- hosts: client1
   vars:
     content: "mayank web through ansible"
   tasks:
