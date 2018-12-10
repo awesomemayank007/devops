@@ -5,20 +5,26 @@
   tasks:
   - name: install httpd
     yum: name=httpd state=installed
+    become: yes
+    become_user: root
 
   - name: copy file1
     copy: content={{ content  }} dest=/var/www/html/web1.html
     notify: restart httpd
+    become: yes
+    become_user: root
 
-  - name: copy file2
-    copy: src=/my.conf dest=/etc/httpd/conf.d/my.conf
-    notify: restart httpd
+#  - name: copy file2
+#    copy: src=/my.conf dest=/etc/httpd/conf.d/my.conf
+#    notify: restart httpd
 
-  - name: edit hosts file
-    script: /script.sh
-    notify: restart httpd
+# - name: edit hosts file
+#    script: /script.sh
+#    notify: restart httpd
 
 
   handlers:
   - name: restart httpd
     service: name=httpd state=restarted
+    become: yes
+    become_user: root
