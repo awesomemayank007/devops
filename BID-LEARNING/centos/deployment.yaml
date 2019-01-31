@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: webapp1
-        image: my-img:v1
+        image: my-img-centos:v1
         ports:
         - containerPort: 80
